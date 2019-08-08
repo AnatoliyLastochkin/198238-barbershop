@@ -72,13 +72,15 @@
 
       <section class="gallery">
         <h2>Фотогалерея</h2>
-        <figure class="gallery-content">
-          <a href="#">
-            <img src="img/studio.jpg" width="286" height="164" alt="Интерьер">
-          </a>
-        </figure>
-        <button class="button gallery-button gallery-button-back" type="button">Назад</button>
-        <button class="button gallery-button gallery-button-next" type="button">Вперед</button>
+        <div class="gallery-container">
+          <figure class="gallery-content">
+            <a href="#">
+              <img src="img/studio.jpg" width="286" height="164" alt="Интерьер">
+            </a>
+          </figure>
+          <button class="button gallery-button gallery-button-back" type="button" disabled>Назад</button>
+          <button class="button gallery-button gallery-button-next" type="button">Вперед</button>
+        </div>
       </section>
     </div>
 
@@ -137,12 +139,24 @@
       <div class="footer-social">
         <b>Давайте дружить!</b>
         <ul>
-          <li><a class="social-button" href="#">Вконтакте</a></li>
-          <li><a class="social-button" href="#">Фейсбук</a></li>
-          <li><a class="social-button" href="#">Инстаграм</a></li>
+          <li>
+            <a class="social-button social-button-vk" href="#">
+              <span class="visually-hidden">Вконтакте</span>
+            </a>
+          </li>
+          <li>
+            <a class="social-button social-button-fb" href="#">
+              <span class="visually-hidden">Фейсбук</span>
+            </a>
+          </li>
+          <li>
+            <a class="social-button social-button-inst" href="#">
+              <span class="visually-hidden">Инстаграм</span>
+            </a>
+          </li>
         </ul>
       </div>
-      <p class="social-copyright">
+      <p class="footer-copyright">
         <b>Разработано:</b>
         <a class="button" href="https://htmlacademy.ru">HTML Academy</a>
       </p>
@@ -159,7 +173,8 @@
       </p>
       <p>
         <label class="visually-hidden" for="user-password">Пароль</label>
-        <input class="login-icon-password" id="user-password" type="password" name="password" placeholder="Пароль">
+        <input class="login-icon-password" id="user-password" type="password"
+               name="password" placeholder="Пароль">
       </p>
       <p class="login-password-info">
         <label class="login-checkbox">
