@@ -1,5 +1,5 @@
 'use strict';
-function loginPopup() {
+
 
 const loginLink = document.querySelector('.login-link');
 const popupLogin = document.querySelector('.modal-login');
@@ -51,18 +51,19 @@ loginForm.addEventListener('submit', evt => {
 
 window.addEventListener('keydown', evt => {
   if (evt.keyCode === 27) {
-    evt.preventDefault()
+    evt.preventDefault();
     if (popupLogin.classList.contains('modal-show')) {
       popupLogin.classList.remove('modal-show');
       popupLogin.classList.remove('modal-error');
     }
+
+    if (mapPopup.classList.contains('modal-show')) {
+      mapPopup.classList.remove('modal-show');
+    }
   }
 });
 
-}
-loginPopup();
 
-function mapPopup() {
   const mapLink = document.querySelector('.button-map');
   const mapPopup = document.querySelector('.modal-map');
   const mapClose = mapPopup.querySelector('.modal-close');
@@ -77,13 +78,5 @@ function mapPopup() {
     mapPopup.classList.remove('modal-show');
   });
 
-  window.addEventListener('keydown', evt => {
-    evt.preventDefault();
-    if (evt.keyCode === 27) {
-      if (mapPopup.classList.contains('modal-show')) {
-        mapPopup.classList.remove('modal-show');
-      }
-    }
-  });
-}
-mapPopup();
+  
+
