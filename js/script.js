@@ -78,5 +78,5 @@ window.addEventListener('keydown', evt => {
     mapPopup.classList.remove('modal-show');
   });
 
-  
+
 
